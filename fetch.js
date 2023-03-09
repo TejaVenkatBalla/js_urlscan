@@ -10,7 +10,7 @@ function scanUrl() {
       body: new URLSearchParams({ url: url })
     };
   
-    fetch('https://www.virustotal.com/api/v3/urls', options)
+    fetch('https://cors-anywhere.herokuapp.com/https://www.virustotal.com/api/v3/urls', options)
       .then(response => response.json())
       .then(data => {
         const resultDiv = document.getElementById('result');
